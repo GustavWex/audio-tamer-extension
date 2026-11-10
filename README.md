@@ -1,6 +1,24 @@
 # Audio Tamer (Chrome extension)
 
-Live cleanup filter for harsh, clipped, scratchy audio in any Chrome tab. It turns down loud parts, removes bass thumps and crackles, and softens scratchy treble:
+Live cleanup filter for harsh, clipped, scratchy audio in any Chrome tab. It turns down loud parts, removes bass thumps and crackles, and softens scratchy treble.
+
+## Background
+
+I built this for watching DTU lecture recordings on Panopto. In some lectures, the lecturer holds the
+microphone right up against their mouth or throat. The recording overloads every time they speak up,
+so the audio clips and turns harsh, scratchy and spiky, which hurts to listen to on headphones.
+
+The filter was tuned on one of those recordings. Analysis showed four problems:
+- digital clipping on almost every loud word
+- harsh distortion in the 2–5 kHz range
+- bass thumps from the mic being so close
+- loud words jumping 15+ dB above normal speech
+
+Audio Tamer fixes those live, in any tab. It works on any site, not just Panopto.
+
+*Not affiliated with DTU or Panopto.*
+
+## What it does
 
 1. **Bass thump removal**: steep high-pass at 150 Hz.
 2. **Scratchy-treble cut**: four peaking cuts around 2.2–6.5 kHz plus a low-pass roll-off.

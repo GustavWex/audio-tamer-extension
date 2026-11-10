@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Audio Tamer</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <header>
+      <h1>Audio Tamer</h1>
+      <p id="tab" class="muted">This tab</p>
+    </header>
+
+    <button id="toggle" class="primary">Turn on for this tab</button>
+    <p id="error" class="error" hidden></p>
+
+    <section>
+      <span class="label">Strength</span>
+      <div class="seg" role="radiogroup" aria-label="Strength">
+        <label><input type="radio" name="preset" value="light"><span>Light</span></label>
+        <label><input type="radio" name="preset" value="standard"><span>Standard</span></label>
+        <label><input type="radio" name="preset" value="smoothest"><span>Smoothest</span></label>
+      </div>
+    </section>
+
+    <section>
+      <label class="label" for="volume">Volume <span id="volval"></span></label>
+      <input id="volume" type="range" min="0" max="2" step="0.05">
+    </section>
+
+    <section class="row">
+      <label><input id="autogain" type="checkbox"> Even out volume (auto gain)</label>
+    </section>
+    <section class="row">
+      <label><input id="bypass" type="checkbox"> Bypass (hear the original to compare)</label>
+    </section>
+
+    <p class="muted small">Tames loud parts, removes bass thumps and crackles, softens scratchy treble. Settings apply to every tab you turn it on for.</p>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

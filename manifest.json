@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Audio Tamer",
+  "version": "1.0.0",
+  "description": "Makes harsh, clipped, scratchy tab audio easier on the ears: tames loud parts, removes bass thumps and crackles, softens the scratchy treble.",
+  "minimum_chrome_version": "116",
+  "permissions": ["tabCapture", "offscreen", "storage", "activeTab"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Audio Tamer",
+    "default_popup": "popup.html"
+  }
+}
